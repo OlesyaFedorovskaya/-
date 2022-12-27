@@ -11,10 +11,6 @@
 // [“1234”, “1567”, “-2”, “computer science”] → [“-2”]
 // [“Russia”, “Denmark”, “Kazan”] → []
 
-//Console.WriteLine("Введите количество элементов в массиве: ");
-//int size = Convert.ToInt32(Console.ReadLine());
-
-
 void ElementsArray(string[] array)
 {
     for (int i = 0; i < array.Length; i++)
