@@ -25,3 +25,14 @@ void ElementsArray(string[] array)
     }
 }
 
+void PrintArray(string[] array)
+{
+    Console.Write("[");
+    for (int i = 0; i < size; i++)
+    {
+        if (i < size - 1) Console.Write($"{array[i]}, ");
+        else Console.Write($"{array[i]}");
+    }
+    Console.WriteLine("]");
+}
+
