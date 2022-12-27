@@ -1,6 +1,4 @@
-﻿// Console.WriteLine("Hello, World!");
-
-//  Задача: Написать программу, которая
+﻿//  Задача: Написать программу, которая
 //  из имеющегося массива строк формирует новый массив из строк, 
 //  длина которых меньше, либо равна 3 символам. 
 //  Первоначальный массив можно ввести с клавиатуры, 
@@ -12,3 +10,18 @@
 // [“Hello”, “2”, “world”, “:-)”] → [“2”, “:-)”]
 // [“1234”, “1567”, “-2”, “computer science”] → [“-2”]
 // [“Russia”, “Denmark”, “Kazan”] → []
+
+Console.WriteLine("Введите количество элементов в массиве: ");
+int size = Convert.ToInt32(Console.ReadLine());
+
+
+void ElementsArray(string[] array)
+{
+    for (int i = 0; i < size; i++)
+    {
+        Console.WriteLine($"Введите {i + 1} элемент: ");
+        string count = Console.ReadLine().ToString();
+        count = array[i];
+    }
+}
+
