@@ -46,4 +46,26 @@ int NewArraySize(string[] array)
     return count;
 }
 
+string[] ConvertToString(string[] array, int size)
+{
+    string[] array2 = new string[size];
+    int result = 0;
+    for (int i = 0; i < array.Length; i++)
+    {
+        if (array[i].Length <= 3)
+        {
+            array2[result] = array[i];
+            result++;
+        }
+    }
+    return array2;
+}
+
+string[] array1 = new string[size];
+ElementsArray(array1);
+PrintArray(array1);
+int size2 = NewArraySize(array1);
+string[] array2 = ConvertToString(array1, size2);
+Console.WriteLine("Формируем новый строчный массив");
+PrintArray(array2);
 
