@@ -11,26 +11,26 @@
 // [“1234”, “1567”, “-2”, “computer science”] → [“-2”]
 // [“Russia”, “Denmark”, “Kazan”] → []
 
-Console.WriteLine("Введите количество элементов в массиве: ");
-int size = Convert.ToInt32(Console.ReadLine());
+//Console.WriteLine("Введите количество элементов в массиве: ");
+//int size = Convert.ToInt32(Console.ReadLine());
 
 
 void ElementsArray(string[] array)
 {
-    for (int i = 0; i < size; i++)
+    for (int i = 0; i < array.Length; i++)
     {
         Console.WriteLine($"Введите {i + 1} элемент: ");
-        string count = Console.ReadLine().ToString();
-        count = array[i];
+        string temp = Console.ReadLine().ToString();
+        array[i] = temp;
     }
 }
 
 void PrintArray(string[] array)
 {
     Console.Write("[");
-    for (int i = 0; i < size; i++)
+    for (int i = 0; i < array.Length; i++)
     {
-        if (i < size - 1) Console.Write($"{array[i]}, ");
+        if (i < array.Length - 1) Console.Write($"{array[i]}, ");
         else Console.Write($"{array[i]}");
     }
     Console.WriteLine("]");
@@ -41,7 +41,8 @@ int NewArraySize(string[] array)
     int count = 0;
     for (int i = 0; i < array.Length; i++)
     {
-        if (array[i].Length <= 3) count++;
+        if (array[i].Length <= 3)
+            count++;
     }
     return count;
 }
@@ -61,11 +62,13 @@ string[] ConvertToString(string[] array, int size)
     return array2;
 }
 
+Console.WriteLine("Введите количество элементов в массиве: ");
+int size = Convert.ToInt32(Console.ReadLine());
 string[] array1 = new string[size];
 ElementsArray(array1);
-PrintArray(array1);
 int size2 = NewArraySize(array1);
 string[] array2 = ConvertToString(array1, size2);
+PrintArray(array1);
 Console.WriteLine("Формируем новый строчный массив");
 PrintArray(array2);
 
