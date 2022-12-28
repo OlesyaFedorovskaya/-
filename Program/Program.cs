@@ -40,7 +40,7 @@ int NewArraySize(string[] array)
         if (array[i].Length <= 3)
             count++;
     }
-    return count;
+    return count; 
 }
 
 string[] ConvertToString(string[] array, int size)
